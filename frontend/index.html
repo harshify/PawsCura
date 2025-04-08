@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <title>PawsCura | AI-Powered Dog Skin Health Analysis</title>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="py-6 px-4 lg:px-10 bg-gray-800 shadow-sm fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="logo-container">
+                    <h1 class="text-2xl lg:text-3xl font-bold"><span class="text-indigo-400">Paws</span><span class="text-pink-400">Cura</span></h1>
+                </a>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#about" class="nav-link text-gray-300">About</a>
+                <a href="#how-it-works" class="nav-link text-gray-300">How It Works</a>
+                <a href="#check-health" class="nav-link text-gray-300">Check Health</a>
+            </div>
+            
+            <div class="lg:hidden">
+                <button class="hamburger-menu text-gray-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden bg-gray-800 w-full absolute left-0 top-full shadow-md py-4 px-6 mt-1">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="nav-link text-gray-300">About</a>
+                <a href="#how-it-works" class="nav-link text-gray-300">How It Works</a>
+                <a href="#check-health" class="nav-link text-gray-300">Check Health</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20 px-4 md:pt-40 md:pb-28 bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        <span class="text-indigo-400">AI-Powered</span> Dog Skin<br/>Health Analysis
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-xl">
+                        Using advanced deep learning technology to detect and diagnose skin conditions in dogs with accuracy and precision.
+                    </p>
+                    <a href="#check-health" class="btn-primary inline-flex items-center">
+                        <span>Analyze Your Dog's Skin</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="hero-image-grid">
+                        <img src="./images/dog-pic-8.jpg" alt="Healthy dog" class="img-1 rounded-2xl shadow-xl" />
+                        <img src="./images/dog-pic-5.jpg" alt="Dog being examined" class="img-2 rounded-2xl shadow-xl" />
+                        <img src="./images/dog-pic-11.jpg" alt="Close-up of dog" class="img-3 rounded-2xl shadow-xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Why <span class="text-indigo-400">Paws</span><span class="text-pink-400">Cura</span>?</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-pink-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="feature-card bg-gray-700 border-gray-600">
+                    <div class="feature-icon bg-indigo-900 text-indigo-300">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 mt-6 text-white">Advanced AI Technology</h3>
+                    <p class="text-gray-300">Leveraging deep learning models trained on thousands of dog skin conditions for accurate diagnosis.</p>
+                </div>
+                
+                <div class="feature-card bg-gray-700 border-gray-600">
+                    <div class="feature-icon bg-pink-900 text-pink-300">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 mt-6 text-white">Instant Analysis</h3>
+                    <p class="text-gray-300">Get results in seconds, complete with detailed information and recommended actions.</p>
+                </div>
+                
+                <div class="feature-card bg-gray-700 border-gray-600">
+                    <div class="feature-icon bg-indigo-900 text-indigo-300">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 mt-6 text-white">Veterinarian Approved</h3>
+                    <p class="text-gray-300">Developed in collaboration with veterinary dermatologists for reliable health insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">How It Works</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-pink-500 mx-auto"></div>
+                <p class="text-gray-300 mt-6 max-w-2xl mx-auto">Our advanced AI system identifies potential skin conditions from a simple photo upload.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="step-card bg-gray-700 border-gray-600">
+                    <div class="step-number">1</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Upload a Photo</h3>
+                    <p class="text-gray-300">Take a clear photo of your dog's skin condition and upload it to our system.</p>
+                </div>
+                
+                <div class="step-arrow hidden md:block">
+                    <i class="fas fa-long-arrow-alt-right text-3xl text-gray-600"></i>
+                </div>
+                
+                <div class="step-card bg-gray-700 border-gray-600">
+                    <div class="step-number">2</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">AI Analysis</h3>
+                    <p class="text-gray-300">Our deep learning algorithm processes the image and detects potential conditions.</p>
+                </div>
+                
+                <div class="step-arrow hidden md:block">
+                    <i class="fas fa-long-arrow-alt-right text-3xl text-gray-600"></i>
+                </div>
+                
+                <div class="step-card bg-gray-700 border-gray-600">
+                    <div class="step-number">3</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Get Results</h3>
+                    <p class="text-gray-300">Receive a detailed analysis with condition information and recommended actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Check Health Section -->
+    <section id="check-health" class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Check Your Dog's Skin Health</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-600 to-pink-500 mx-auto"></div>
+                <p class="text-gray-300 mt-6 max-w-2xl mx-auto">Upload a clear image of your dog's skin to get an instant analysis of potential conditions.</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gray-700 rounded-2xl shadow-xl p-8">
+                    <!-- Image Preview -->
+                    <div id="imagePreview" class="mb-8 hidden">
+                        <div class="relative overflow-hidden rounded-xl h-64">
+                            <img id="preview" class="w-full h-full object-cover rounded-xl" src="" alt="Preview">
+                            <div class="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+                                <span class="px-4 py-2 bg-gray-800 bg-opacity-80 rounded-full text-sm font-semibold text-gray-200">Preview</span>
+                            </div>
+                        </div>
+                        <!-- Choose Another Image button (appears when image is uploaded) -->
+                        <div class="mt-4 text-center">
+                            <button id="chooseAnotherButton" class="btn-secondary">
+                                <i class="fas fa-exchange-alt mr-2"></i>
+                                Choose Another Image
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Upload Form -->
+                    <div id="uploadForm" class="text-center mb-8">
+                        <input type="file" id="imageInput" accept="image/jpeg,image/png" class="hidden">
+                        <label for="imageInput" class="upload-area group">
+                            <div class="flex flex-col items-center justify-center py-10 px-6 border-2 border-dashed border-indigo-700 rounded-xl bg-gray-800 transition-all group-hover:border-indigo-500 group-hover:bg-gray-700">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-indigo-400 mb-4"></i>
+                                <h3 class="text-xl font-semibold text-gray-200 mb-2">Upload Image</h3>
+                                <p class="text-gray-400 text-sm">JPG or PNG format only</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Check Button -->
+                    <div class="text-center">
+                        <button id="checkButton" class="btn-primary w-full py-4">
+                            <i class="fas fa-search-plus mr-2"></i>
+                            Analyze Skin Condition
+                        </button>
+                    </div>
+
+                    <!-- Loader -->
+                    <div id="loader" class="hidden text-center mt-8">
+                        <div class="loader-spinner">
+                            <div class="spinner-inner"></div>
+                        </div>
+                        <p class="mt-4 text-gray-300">Analyzing image with our AI...</p>
+                    </div>
+
+                    <!-- Result -->
+                    <div id="result" class="hidden mt-8 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-4">Prediction Result</h3>
+                        <p id="predictionText" class="text-xl text-blue-400 font-semibold"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h1 class="text-2xl font-bold mb-4"><span class="text-indigo-400">Paws</span><span class="text-pink-400">Cura</span></h1>
+                    <p class="text-gray-400 max-w-md">Advanced AI technology to help keep your furry friends healthy and happy.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+                            <li><a href="#check-health" class="text-gray-400 hover:text-white transition">Check Health</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-envelope mr-2"></i>
+                                <a href="mailto:support@pawscura.com" class="hover:text-white transition">support@pawscura.com</a>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-phone mr-2"></i>
+                                <a href="tel:+15551234567" class="hover:text-white transition">+1 (555) 123-4567</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PawsCura. All rights reserved.</p>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg hidden z-50">
+        <p id="toastMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

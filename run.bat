@@ -1,0 +1,9 @@
+@echo off
+echo Installing required packages...
+pip install -r requirements.txt
+
+echo Starting PawsCura application...
+python app.py
+
+echo Opening browser...
+start http://localhost:5000 
