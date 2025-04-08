@@ -150,32 +150,34 @@ window.addEventListener('DOMContentLoaded', async () => {
     
     // Get disease description and remedies from the API
     try {
-        const response = await fetch(`/disease-info?disease=${encodeURIComponent(prediction)}`);
-        if (response.ok) {
-            const data = await response.json();
-            
-            // Update description
-            diseaseDescription.textContent = data.description || 'No information available.';
-            
-            // Update remedies list
-            if (data.remedies && data.remedies.length > 0) {
-                remediesList.innerHTML = '';
-                data.remedies.forEach(remedy => {
-                    const li = document.createElement('li');
-                    li.className = 'flex items-start';
-                    li.innerHTML = `
-                        <span class="flex-shrink-0 w-5 h-5 bg-indigo-900 text-indigo-300 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                            <i class="fas fa-check text-xs"></i>
-                        </span>
-                        <span class="text-gray-300">${remedy}</span>
-                    `;
-                    remediesList.appendChild(li);
-                });
-            } else {
-                setDefaultRemedies(prediction);
-            }
+        const diseaseName = encodeURIComponent(prediction);
+        const response = await fetch(`/api/disease-info?disease=${diseaseName}`);
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch disease information');
+        }
+        
+        const data = await response.json();
+        
+        // Update description
+        diseaseDescription.textContent = data.description || 'No information available.';
+        
+        // Update remedies list
+        if (data.remedies && data.remedies.length > 0) {
+            remediesList.innerHTML = '';
+            data.remedies.forEach(remedy => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start';
+                li.innerHTML = `
+                    <span class="flex-shrink-0 w-5 h-5 bg-indigo-900 text-indigo-300 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                        <i class="fas fa-check text-xs"></i>
+                    </span>
+                    <span class="text-gray-300">${remedy}</span>
+                `;
+                remediesList.appendChild(li);
+            });
         } else {
-            handleDiseaseInfoError(prediction);
+            setDefaultRemedies(prediction);
         }
     } catch (error) {
         console.error('Error fetching disease information:', error);

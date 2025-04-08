@@ -40,4 +40,29 @@ ENV/
 
 # OS specific
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+.next/
+out/
+build/
+.vercel/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Trained models - too large for GitHub
+Trained-Model/model/*.h5
+
+# Log files
+*.log 

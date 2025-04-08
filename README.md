@@ -1,85 +1,106 @@
-# PawsCura: Dog Skin Disease Detection
+# PawsCura
 
-An AI-powered web application that detects common skin diseases in dogs from uploaded images.
+PawsCura is an AI-powered web application for detecting skin diseases in dogs using machine learning.
 
-## Features
+## Project Overview
 
-- Upload dog skin images for instant disease detection
-- Detection of bacterial and fungal skin infections
-- User-friendly interface with responsive design
-- Real-time predictions with visual indicators
-- Detailed results page with disease information and treatment recommendations
-- AI-generated descriptions and remedies for each condition
-- Confidence level indicator for predictions
+The application allows users to upload images of their dog's skin and get instant predictions about potential skin conditions. It uses a trained machine learning model to analyze the images and provide detailed information about the detected conditions.
 
-## Technologies Used
+## Deployment Guide
 
-- **Frontend**: HTML, CSS, JavaScript with Tailwind CSS
-- **Backend**: Flask (Python)
-- **AI Model**: TensorFlow/Keras deep learning model
+This guide will help you deploy PawsCura to Vercel.
 
-## Setup and Installation
+### Step 1: Set Up GitHub Repository
 
-### Prerequisites
+1. **Create a GitHub Repository**
 
-- Python 3.8 or higher
-- pip (Python package installer)
-
-### Installation Steps
-
-1. Clone the repository or download the source code
-
-2. Install the required Python packages:
-
-   ```
-   pip install -r requirements.txt
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
    ```
 
-3. Run the application:
-
-   ```
-   python app.py
-   ```
-
-4. Open your browser and navigate to:
-   ```
-   http://localhost:5000
+2. **Create a new repository on GitHub**, then push your local repository:
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/pawscura.git
+   git push -u origin main
    ```
 
-## Usage
+### Step 2: Deploy to Vercel
 
-1. Navigate to the "Check your furs health" section
-2. Click on "Choose Image" to upload a photo of your dog's skin
-3. Click "Check for Disease" to get the prediction
-4. View the results displayed below the button
+1. **Sign up/in to Vercel**
 
-## Model Information
+   - Go to [vercel.com](https://vercel.com) and sign up or log in with your GitHub account
 
-The model is trained to identify three categories:
+2. **Create a New Project**
 
-- Bacterial Dermatitis
-- Fungal Infection
-- Healthy
+   - Click "Add New..." > "Project"
+   - Import your GitHub repository
+   - Vercel will automatically detect that it's a Node.js project
+
+3. **Configuration**
+
+   - Vercel should automatically detect the correct build settings based on the vercel.json file
+   - No additional environment variables are needed for basic functionality
+
+4. **Deploy**
+
+   - Click "Deploy"
+   - Vercel will build and deploy your application
+
+5. **Access Your Live Site**
+   - Once deployment is complete, you can access your site at the URL provided by Vercel
+
+## Local Development
+
+To run the project locally:
+
+1. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Access the application**
+   - Open your browser and go to [http://localhost:3000](http://localhost:3000)
 
 ## Project Structure
 
-```
-PawsCura/
-├── app.py                # Flask application
-├── requirements.txt      # Python dependencies
-├── Trained-Model/        # Contains the trained model files
-│   └── model/
-│       └── model.h5      # The main model file
-└── frontend/            # Frontend files
-    ├── index.html        # Main HTML file
-    ├── styles.css        # CSS styles
-    ├── script.js         # JavaScript functionality
-    └── images/           # Image assets
-```
+- `/frontend` - Contains all frontend HTML, CSS, and JavaScript files
+- `/api` - Contains the Express.js backend
+- `vercel.json` - Configuration for Vercel deployment
+- `package.json` - Node.js dependencies and scripts
+
+## Features
+
+- Upload dog skin images for analysis
+- AI-powered disease detection
+- Detailed information about detected conditions
+- Recommended actions for treatment
+- Mobile-responsive design with dark mode
+
+## Technical Details
+
+- **Frontend**: HTML, CSS, JavaScript, Tailwind CSS
+- **Backend**: Express.js
+- **Deployment**: Vercel
+- **Image Processing**: Node.js
+
+## Notes
+
+- The current version uses a mock prediction service that returns random results
+- In a production environment, you would integrate with a real machine learning model
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Deepseek R1 API Integration
 
