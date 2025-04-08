@@ -151,7 +151,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Get disease description and remedies from the API
     try {
         const diseaseName = encodeURIComponent(prediction);
-        const response = await fetch(`/api/disease-info?disease=${diseaseName}`);
+        const response = await fetch(`http://localhost:3000/api/disease-info?disease=${diseaseName}`);
         
         if (!response.ok) {
             throw new Error('Failed to fetch disease information');
